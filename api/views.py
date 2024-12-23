@@ -72,6 +72,6 @@ class AddLicense(APIView):
         serializer=LicenseDetailsSerializers(data=fromdata)
         if serializer.is_valid():
             serializer.save()
-            return Response({"msg":"added successfully"}, status=status.HTTP_200_OK)
+            return Response({"msg":"license added successfully"}, status=status.HTTP_200_OK)
         else:
             return Response({"msg":"failed to add"},status=status.HTTP_400_BAD_REQUEST)
